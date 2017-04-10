@@ -14,7 +14,7 @@ class BuildInDockerContext extends AbstractContext {
     boolean forcePull
     String userGroup
     String startCommand = '/bin/cat'
-
+    String net = 'bridge'
     BuildInDockerContext(JobManagement jobManagement) {
         super(jobManagement)
         dockerfile()
@@ -77,5 +77,9 @@ class BuildInDockerContext extends AbstractContext {
 
     void startCommand(String startCommand) {
         this.startCommand = startCommand
+    }
+    
+    void net(String net){
+        this.net = net
     }
 }

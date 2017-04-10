@@ -616,6 +616,7 @@ class WrapperContext extends AbstractExtensibleContext {
             forcePull(context.forcePull)
             group(context.userGroup ?: '')
             command(context.startCommand ?: '')
+            net(context.net ?: '')
         }
         node.append(context.selector)
         wrapperNodes << node
